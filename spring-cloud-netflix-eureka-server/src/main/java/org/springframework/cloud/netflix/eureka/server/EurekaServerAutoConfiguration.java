@@ -209,6 +209,7 @@ public class EurekaServerAutoConfiguration implements WebMvcConfigurer {
 	public PeerAwareInstanceRegistry peerAwareInstanceRegistry(ServerCodecs serverCodecs,
 			EurekaServerHttpClientFactory eurekaServerHttpClientFactory) {
 		this.eurekaClient.getApplications(); // force initialization
+
 		return new InstanceRegistry(this.eurekaServerConfig, this.eurekaClientConfig, serverCodecs, this.eurekaClient,
 				eurekaServerHttpClientFactory,
 				this.instanceRegistryProperties.getExpectedNumberOfClientsSendingRenews(),
