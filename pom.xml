@@ -3,14 +3,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>spring-cloud-netflix</artifactId>
-	<version>4.1.0-SNAPSHOT</version>
+	<version>4.0.3.1-CXT</version>
 	<packaging>pom</packaging>
 	<name>Spring Cloud Netflix</name>
 	<description>Spring Cloud Netflix</description>
 	<parent>
 		<groupId>org.springframework.cloud</groupId>
 		<artifactId>spring-cloud-build</artifactId>
-		<version>4.1.0-SNAPSHOT</version>
+		<version>4.0.5</version>
 		<relativePath />
 	</parent>
 	<scm>
@@ -19,10 +19,22 @@
 		<developerConnection>scm:git:ssh://git@github.com/spring-cloud/spring-cloud-netflix.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>e-Spirit Artifactory-snapshots</name>
+			<url>https://artifactory.e-spirit.de:443/artifactory/cxt-mvn-snapshot</url>
+		</snapshotRepository>
+		<repository>
+			<id>central</id>
+			<name>e-Spirit Artifactory-releases</name>
+			<url>https://artifactory.e-spirit.de:443/artifactory/cxt-mvn-release</url>
+		</repository>
+	</distributionManagement>
 	<properties>
 		<bintray.package>netflix</bintray.package>
-		<spring-cloud-commons.version>4.1.0-SNAPSHOT</spring-cloud-commons.version>
-		<spring-cloud-config.version>4.1.0-SNAPSHOT</spring-cloud-config.version>
+		<spring-cloud-commons.version>4.0.4</spring-cloud-commons.version>
+		<spring-cloud-config.version>4.0.4</spring-cloud-config.version>
 		<testcontainers.version>1.19.1</testcontainers.version>
 		<mockserverclient.version>5.15.0</mockserverclient.version>
 
@@ -207,7 +219,7 @@
 				<pluginRepository>
 					<id>spring-releases</id>
 					<name>Spring Releases</name>
-					<url>https://repo.spring.io/libs-release-local</url>
+					<url>https://artifactory.e-spirit.de:443/artifactory/cxt-mvn-release</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>

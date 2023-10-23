@@ -5,14 +5,26 @@
 	<parent>
 		<artifactId>spring-cloud-dependencies-parent</artifactId>
 		<groupId>org.springframework.cloud</groupId>
-		<version>4.1.0-SNAPSHOT</version>
+		<version>4.0.2</version>
 		<relativePath/>
 	</parent>
 	<artifactId>spring-cloud-netflix-dependencies</artifactId>
-	<version>4.1.0-SNAPSHOT</version>
+	<version>4.0.3.1-CXT</version>
 	<packaging>pom</packaging>
 	<name>spring-cloud-netflix-dependencies</name>
 	<description>Spring Cloud Netflix Dependencies</description>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>e-Spirit Artifactory-snapshots</name>
+			<url>https://artifactory.e-spirit.de:443/artifactory/cxt-mvn-snapshot</url>
+		</snapshotRepository>
+		<repository>
+			<id>releases</id>
+			<name>e-Spirit Artifactory-releases</name>
+			<url>https://artifactory.e-spirit.de:443/artifactory/cxt-mvn-release</url>
+		</repository>
+	</distributionManagement>
 	<properties>
 		<eureka.version>2.0.1</eureka.version>
 	</properties>
